@@ -1,0 +1,34 @@
+:root {
+    --reset-spatiu: 0;
+    --font-relativ: 1rem;
+}
+
+html, body {
+    margin: var(--reset-spatiu);
+    padding: var(--reset-spatiu);
+    font-size: 18px; 
+}
+
+h1, h2, h3, p, div, section, header, footer, table, th, td {
+    margin: var(--reset-spatiu);
+    padding: var(--reset-spatiu);
+    font-size: var(--font-relativ);
+}
+
+b, strong {
+    font-weight: 700; 
+}
+
+i, em {
+    font-style: italic;
+}
+
+ul, ol {
+    margin-left: 2rem; 
+    padding-left: 1rem;
+    list-style-type: square; 
+}
+
+table {
+    border-collapse: collapse;
+}

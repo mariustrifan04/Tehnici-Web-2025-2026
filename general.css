@@ -1,0 +1,236 @@
+body {
+    --culoare-background: #F4ECD8;
+    --culoare-text: #2C2C2C;
+    --culoare-principala: #4A5D23;
+    --culoare-border: #5C4033;
+    
+    --margine-pagina: 60px;
+    --gap-grid: 30px;
+    --padding-zone: 20px;
+
+    background-color: var(--culoare-background);
+    color: var(--culoare-text);
+    margin-left: var(--margine-pagina);
+    margin-right: var(--margine-pagina);
+    font-family: 'Roboto', sans-serif;
+}
+
+h1, h2, h3 {
+    font-family: 'Cinzel', serif;
+    color: var(--culoare-principala);
+}
+
+html {
+    font-size: 18px;
+    transition: font-size 0.4s ease;
+}
+
+header, footer, .container-grid > section {
+    padding: var(--padding-zone);
+    border: 2px solid var(--culoare-border);
+    border-radius: 10px;
+    box-shadow: 5px 5px 15px rgba(0,0,0,0.1);
+    margin-bottom: 20px;
+}
+
+header { background-color: #E8DFCA; }
+footer { background-color: #DED5C0; }
+.container-grid > section { background-color: #FFFFFF; }
+
+.zona1 { grid-area: zona1; }
+.zona2 { grid-area: zona2; }
+.zona3 { grid-area: zona3; }
+.zona4 { grid-area: zona4; }
+.zona5 { grid-area: zona5; }
+.zona6 { grid-area: zona6; }
+.zona7 { grid-area: zona7; }
+.zona8 { grid-area: zona8; }
+
+.container-grid {
+    display: grid;
+    gap: var(--gap-grid);
+    grid-template-areas:
+        "zona1 zona1 zona1"
+        "zona5 zona6 zona7"
+        "zona3 zona2 zona2"
+        "zona4 zona2 zona2"
+        "zona8 zona8 zona8";
+}
+
+.container-iframe { display: flex; align-items: flex-start; }
+.taburi-iframe { display: flex; flex-direction: column; }
+.taburi-iframe a {
+    display: block;
+    width: 150px;
+    padding: 15px;
+    background-color: #4b7bc0;
+    color: white;
+    border: 2px solid #1a3b6c;
+    text-decoration: none;
+    text-align: center;
+    border-radius: 15px 0 0 15px;
+}
+.container-iframe iframe { aspect-ratio: 16 / 9; }
+
+img, iframe, object, video, table {
+    width: 100%;
+    max-width: 900px;
+    min-width: 200px;
+    height: auto;
+}
+
+object { min-height: 600px; }
+footer iframe { min-height: 400px; }
+
+@media (max-width: 1024px) {
+    body { --margine-pagina: 20px; }
+    .container-grid { 
+        --gap-grid: 15px;
+        grid-template-areas:
+            "zona1 zona1"
+            "zona5 zona6"
+            "zona7 zona3"
+            "zona4 zona2"
+            "zona8 zona8";
+    }
+    html { font-size: 16px; }
+}
+
+@media (max-width: 768px) {
+    body { --margine-pagina: 5px; }
+    .container-grid { 
+        --gap-grid: 10px;
+        grid-template-areas:
+            "zona1" "zona5" "zona6" "zona7" "zona3" "zona4" "zona2" "zona8";
+    }
+    html { font-size: 15px; }
+}
+
+object {
+    min-height: 400px; 
+    max-width: 400px;
+}
+
+footer iframe {
+    min-height: 200px;
+    max-width: 450px;
+}
+
+/*Etapa 2 Cerinta 5*/
+.container-tabel {
+    overflow-x: auto; 
+}
+
+table {
+    width: 100%;
+    border-collapse: separate; 
+    border-spacing: 3px; 
+}
+
+caption {
+    caption-side: bottom;
+    padding-top: 10px;
+    font-weight: bold;
+}
+
+th, td {
+    border: 2px solid var(--culoare-border);
+    padding: 10px;
+    text-align: center;
+}
+
+thead, tfoot {
+    background-color: var(--culoare-border);
+    color: white;
+}
+
+tbody tr:nth-child(odd) {
+    background-color: #FFFFFF;
+}
+tbody tr:nth-child(even) {
+    background-color: #E8DFCA; 
+}
+
+tbody tr {
+    transition: background-color 0.4s ease;
+}
+tbody tr:hover {
+    background-color: #d4c19c; 
+}
+
+@media (max-width: 768px) {
+    table {
+        border-spacing: 0; 
+    }
+}
+
+
+
+/*Etapa 2 Cerinta 6*/
+
+#link-top {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    width: 45px;
+    height: 45px;
+    border: 3px solid var(--culoare-border);
+
+    transform: rotate(45deg); 
+    opacity: 0.5; 
+    transition: all 0.4s ease; 
+    
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: transparent;
+}
+
+#triunghi {
+    width: 0;
+    height: 0;
+
+    border-left: 12px solid transparent;
+    border-right: 12px solid transparent;
+    border-bottom: 20px solid var(--culoare-border);
+    border-top: none;
+
+    border-radius: 50%;
+
+    transform: rotate(-45deg);
+    transition: border-bottom-color 0.4s ease;
+}
+
+#link-top:hover {
+    opacity: 1; 
+    background-color: var(--culoare-border);
+}
+
+#link-top:hover #triunghi {
+    border-bottom-color: white; 
+}
+
+/*Etapa 2 Bonus 2*/
+
+math {
+    background-color: #E8DFCA; 
+    padding: 15px;
+    border-radius: 10px;
+    font-size: 1.2rem;
+}
+
+math mi {
+    color: var(--culoare-principala); 
+    font-weight: bold;
+    font-style: italic;
+}
+
+math mo {
+    color: #8b0000;
+    font-weight: bold;
+}
+
+math mn {
+    color: #1a3b6c; 
+    font-weight: bold;
+}
