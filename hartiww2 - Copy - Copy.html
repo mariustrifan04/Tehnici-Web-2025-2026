@@ -13,6 +13,7 @@
 
     <link rel="stylesheet" href="reset.css">
     <link rel="stylesheet" href="general.css">
+    <link rel="stylesheet" href="style.css">
 
     <link rel="icon" type="image/png" href="./Resurse/Imagini/favicon/favicon-96x96.png" sizes="96x96" />
     <link rel="icon" type="image/svg+xml" href="./Resurse/Imagini/favicon/favicon.svg" />
@@ -27,14 +28,21 @@
 <body>
     <header>
         <h1>
+            /*Etapa 2 Task Icon*/
             <i class="fa-solid fa-map-location-dot"></i> Tehnici web
             <i class="fa-solid fa-star fa-spin"></i>
         </h1>
         <img src="sigla.png" alt="sigla" />
         <nav>
+           <input type="checkbox" id="check-meniu">
+    <label for="check-meniu" id="hamburger">
+        <span></span>
+        <span></span>
+        <span></span>
+    </label>
             <ul>
                 <li>
-                    <a href="#top">Acasă</a>
+                    <a href="#top"><i class="fas fa-home"></i> Acasă</a>
                     <ul>
                         <li><a href="#video">Documentare Video</a></li>
                         <li><a href="#catalog">Catalog Prețuri</a></li>
@@ -42,9 +50,22 @@
                         <li><a href="#intrebari-frecvente">Întrebări Frecvente</a></li>
                     </ul>
                 </li>
-                <li><a href="#despre-noi">Despre Noi</a></li>
-                <li><a href="#galerie">Galerie Foto</a></li>
-                <li><a href="#contact">Contact</a></li>
+
+                <li>
+                    <a href="despre-noi.html"><i class="fas fa-info-circle"></i> Despre Noi</a>
+                </li>
+
+                <li>
+                    <a href="#"><i class="fas fa-images"></i> Galerii</a>
+                    <ul>
+                        <li><a href="galerie-statica.html">Galerie Statică</a></li>
+                        <li><a href="galerie-dinamica.html">Galerie Dinamică</a></li>
+                    </ul>
+                </li>
+
+                <li>
+                    <a href="contact.html"><i class="fas fa-envelope"></i> Contact</a>
+                </li>
             </ul>
         </nav>
     </header>
@@ -167,7 +188,8 @@
 
                     <tfoot>
                         <tr>
-                            <td colspan="3"><strong>Preț promoțional pentru pachetul complet (toate cele 4 hărți)</strong>
+                            <td colspan="3"><strong>Preț promoțional pentru pachetul complet (toate cele 4
+                                    hărți)</strong>
                             </td>
                             <td><strong>600</strong></td>
                         </tr>
@@ -192,8 +214,9 @@
 
                     <iframe id="ytplayer" name="player_istoric" width="560" height="315"
                         src="https://www.youtube.com/embed/videoseries?list=PLNV5NA3bq2fb9Byc2QQr6sYs3pEJOyzBV"
-                        allow="encrypted-media;"
-                         frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                        allow="encrypted-media;" frameborder="0"
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                        allowfullscreen></iframe>
                 </div>
             </section>
 
@@ -340,14 +363,15 @@
             <section>
                 <h2>Resurse și Documente</h2>
 
-                <p>Pentru a explora contextul istoric general, puteți vizita 
+                <p>Pentru a explora contextul istoric general, puteți vizita
                     <a href="https://ro.wikipedia.org/wiki/Al_Doilea_R%C4%83zboi_Mondial" target="_blank">pagina
                         Wikipedia
-                        despre Al Doilea Război Mondial</a>.</p>
+                        despre Al Doilea Război Mondial</a>.
+                </p>
 
                 <p>Statistici detaliate despre pierderile umane pe front pot fi consultate direct la sursă: <br>
                     <a href="https://en.wikipedia.org/wiki/World_War_II_casualties">
-    https://en.wikipedia.org/wiki/World_War_II_casualty_statistics#Human_losses_by_country </a>
+                        https://en.wikipedia.org/wiki/World_War_II_casualty_statistics#Human_losses_by_country </a>
                 </p>
 
                 <p>Apăsați pe previzualizarea de mai jos pentru a deschide harta la rezoluție maximă:</p>
@@ -393,8 +417,7 @@
 
                 <iframe width="560" height="315"
                     src="https://www.youtube.com/embed/videoseries?list=PLNV5NA3bq2fb9Byc2QQr6sYs3pEJOyzBV&autoplay=1&mute=1&loop=1&playlist=PLNV5NA3bq2fb9Byc2QQr6sYs3pEJOyzBV&controls=1"
-                    title="YouTube playlist player" style="border: 0;"
-                    allow="autoplay; encrypted-media;"
+                    title="YouTube playlist player" style="border: 0;" allow="autoplay; encrypted-media;"
                     allowfullscreen>
                 </iframe>
             </section>
@@ -404,6 +427,8 @@
 
 
     <footer>
+
+        <p class="banner">Acesta este un proiect școlar!</p>
 
         <!--Etapa 1 Bonus 4-->
         <section>
