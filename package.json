@@ -1,9 +1,25 @@
 {
   "name": "harti",
   "version": "1.0.0",
-  "description": "",
+  "description": "Site harti",
+  "keywords": [
+    "batalii",
+    "harti",
+    "lupte",
+    "Germania",
+    "conflict",
+    "strategie"
+  ],
+  "homepage": "https://github.com/mariustrifan04/Tehnici-Web-2025-2026#readme",
+  "bugs": {
+    "url": "https://github.com/mariustrifan04/Tehnici-Web-2025-2026/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mariustrifan04/Tehnici-Web-2025-2026.git"
+  },
   "license": "ISC",
-  "author": "",
+  "author": "Trifan Marius",
   "type": "commonjs",
   "main": "index.js",
   "scripts": {
@@ -11,6 +27,7 @@
   },
   "dependencies": {
     "ejs": "^5.0.1",
-    "express": "^5.2.1"
+    "express": "^5.2.1",
+    "sass": "^1.99.0"
   }
 }

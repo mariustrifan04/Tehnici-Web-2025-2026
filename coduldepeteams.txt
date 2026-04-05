@@ -1,0 +1,51 @@
+app.get("/*pagina", function(req, res){
+    console.log("Cale pagina", req.url);
+    if (req.url.startsWith("/resurse") && path.extname(req.url)==""){
+        afisareEroare(res,403);
+        return;
+    }
+    if (path.extname(req.url)==".ejs"){
+        afisareEroare(res,400);
+        return;
+    }
+    try{
+        res.render("pagini"+req.url, function(err, rezRandare){
+            if (err){
+                if (err.message.includes("Failed to lookup view")){
+                    afisareEroare(res,404)
+                }
+                else{
+                    afisareEroare(res);
+                }
+            }
+            else{
+                res.send(rezRandare);
+                console.log("Rezultat randare", rezRandare);
+            }
+        });
+    }
+    catch(err){
+        if (err.message.includes("Cannot find module")){
+            afisareEroare(res,404)
+        }
+        else{
+            afisareEroare(res);
+        }
+    }
+});
+
+
+app.get("/favicon.ico", function(req, res){
+    res.sendFile(path.join(__dirname,"resurse/imagini/favicon/favicon.ico"))
+});
+
+
+let vect_foldere=[ "temp", "logs", "backup", "fisiere_uploadate" ]
+for (let folder of vect_foldere){
+    let caleFolder=path.join(__dirname, folder);
+    if (!fs.existsSync(caleFolder)) {
+        fs.mkdirSync(path.join(caleFolder), {recursive:true});   
+    }
+}
+
+
